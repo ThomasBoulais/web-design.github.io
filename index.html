@@ -5,9 +5,9 @@ Version:  1
 Date:     24/02/2017
 -->
 <!DOCTYPE html>
-<meta charset="UTF-8" />
 <html ng-app="guide">
 <head>
+  <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="content\css\bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="content\css\style.css" />
   <script type="text/javascript" src="app\lib\angular.min.js"></script>
@@ -18,14 +18,10 @@ Date:     24/02/2017
 <body ng-controller="GuideController as guide">
   <header>
     <div class="navbar navbar-inverse">
-      <form class="navbar-form navbar-right inline-form">
+
         <img class="resizeLogo" src="content\img\logo.png"/>
-        <p class="titre">Hello world! :)  </p>
-        <div class="form-group">
-          <input type="search" class="input-sm form-control" placeholder="Recherche">
-          <button type="submit" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-eye-open"></span> Chercher</button>
-        </div>
-      </form>
+        <p class="titre">Movie Guide 3476 super trop cool </p>
+
     </div>
   </header>
 
@@ -34,11 +30,17 @@ Date:     24/02/2017
       <a rel="nofollow"> All </a>
       <a rel="nofollow"> #0-9 </a>
       <a rel="nofollow"> A </a>
+    <form class="navbar-form navbar-right inline-form">
+      <div class="form-group">
+        <input type="text" ng-model="recherche" class="input-sm form-control" placeholder="Recherche">
+        <button type="submit" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-eye-open"></span> Chercher</button>
+      </div>
+    </form>
     </div>
 
     <section>
       <div class="list-group row">
-        <div class="list-group-item col-lg-3" ng-repeat="movie in guide.movies | orderBy:!'-name'">
+        <div class="list-group-item col-lg-3" ng-repeat="movie in guide.movies | orderBy:'name' | filter:recherche ">
           {{movie.name | uppercase}}
           <em class="pull-right">{{movie.rating}} / 10</em><br>
           <img class="resizePoster" src="{{movie.thumb}}"/>
