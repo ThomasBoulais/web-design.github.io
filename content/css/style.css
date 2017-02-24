@@ -1,4 +1,33 @@
-img.resize{
-  max-width: 10%;
-  max-height: 10%;
+img.resizePoster{
+  max-width: 50%;
+  max-height: 50%;
+}
+
+img.resizeLogo{
+  max-width: 15%;
+  max-height: 15%;
+}
+
+.navStyle{
+  color: #AAA;
+  font-family: 'Arial bold', sans-serif;
+  font-size: 18 px;
+  display: block;
+  line-height: 360%;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  top: 50%;
+}
+
+.titre{
+  color: #FFF;
+  font-family: 'Arial bold', sans-serif;
+  font-size: 100px;
+  line-height: 76px;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  top: auto;
+  display: inline;
 }
