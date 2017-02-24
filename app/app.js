@@ -7,7 +7,7 @@ app.controller('GuideController', function(){
       yearRelease: 1994,
       rating: 9.3,
       mature: false,
-      thumb: "content/img/??",
+      thumb: "https://images-na.ssl-images-amazon.com/images/M/MV5BODU4MjU4NjIwNl5BMl5BanBnXkFtZTgwMDU2MjEyMDE@._V1_SY1000_CR0,0,672,1000_AL_.jpg",
       trailer: "https://www.youtube.com/watch?v=6hB3S9bIaco",
       reviews: [
         {
@@ -37,5 +37,5 @@ app.controller('GuideController', function(){
         }
       ]
     }
-  ]
-})
+  ];
+});
