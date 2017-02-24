@@ -2,7 +2,21 @@
   var app = angular.module('guide', []);
 
   app.controller('GuideController', function($scope, $http){
-    this.movies = [
+    $scope.fiche = {
+      nom :"",
+      afficher : false,
+      plot :""
+    };
+    $scope.dimensionner = function(boolean){
+      if(boolean == true){
+        return 'list-group-item col-lg-3';
+      }
+      else{
+        return 'list-group-item col-lg-6'
+      }
+
+    }
+    $scope.movies = [
       {
         name: "The Shawshank Redemption",
         yearRelease: 1994,
@@ -94,5 +108,6 @@
         ]
       }
     ];
+
   });
 })();

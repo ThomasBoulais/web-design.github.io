@@ -40,12 +40,16 @@ Date:     24/02/2017
 
     <section>
       <div class="list-group row">
-        <div class="list-group-item col-lg-3" ng-repeat="movie in guide.movies | orderBy:'name' | filter:recherche:strict ">
+        <div class="list-group-item col-lg-3" ng-repeat="movie in movies | orderBy:'name' | filter:recherche:strict " ng-class="dimensionner(movie.showInfo)" >
           {{movie.name | uppercase}}
           <em class="pull-right">{{movie.rating}} / 10</em><br>
-          <img class="resizePoster" src="{{movie.thumb}}"/>
+          <img class="resizePoster" src="{{movie.thumb}}" ng-click="movie.showInfo =!movie.showInfo"/>
+          <p class="info"ng-show="movie.showInfo">directeur : {{movie.director}} </br> Année de sortie : {{movie.yearRelease}}</p>
         </div>
       </div>
+    </section>
+    <section>
+      {{filmPlot}}
     </section>
   </div>
 </body>
