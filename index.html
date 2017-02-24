@@ -22,7 +22,7 @@ Date:     24/02/2017
         <img class="resizeLogo" src="content\img\logo.png"/>
         <p class="titre">Hello world! :)  </p>
         <div class="form-group">
-          <input type="search" class="input-sm form-control" placeholder="Recherche" ng-model="test">
+          <input type="search" class="input-sm form-control" placeholder="Recherche">
           <button type="submit" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-eye-open"></span> Chercher</button>
         </div>
       </form>
@@ -38,7 +38,7 @@ Date:     24/02/2017
 
     <section>
       <div class="list-group row">
-        <div class="list-group-item col-lg-3" ng-repeat="movie in guide.movies | orderBy:!'-name | filter:test'">
+        <div class="list-group-item col-lg-3" ng-repeat="movie in guide.movies | orderBy:!'-name'">
           {{movie.name | uppercase}}
           <em class="pull-right">{{movie.rating}} / 10</em><br>
           <img class="resizePoster" src="{{movie.thumb}}"/>
