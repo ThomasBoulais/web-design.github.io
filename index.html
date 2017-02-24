@@ -8,6 +8,7 @@ Date:     24/02/2017
 <html ng-app="guide">
 <head>
   <link rel="stylesheet" type="text/css" href="content\css\bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="content\css\style.css" />
   <script type="text/javascript" src="app\lib\angular.min.js"></script>
   <script type="text/javascript" src="app\app.js"></script>
   <title>Movie Guide</title>
@@ -20,7 +21,7 @@ Date:     24/02/2017
       {{movie.name | uppercase}}
       <em class="pull-right">{{movie.rating}} / 10</em><br>
 
-      <img src="{{movie.thumb}}"/>
+      <img class="resize" src="{{movie.thumb}}" alt="Computer Hope"/>
     </li>
   </ul>
 
