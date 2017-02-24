@@ -15,12 +15,12 @@
         reviews: [
           {
             stars: 5,
-            body: "I love this product!",
+            body: "I love this movie!",
             author: "joe@thomas.com"
           },
           {
             stars: 1,
-            body: "This product sucks!",
+            body: "This movie sucks!",
             author: "tim@hater.com"
           }
         ]
