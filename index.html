@@ -18,9 +18,9 @@ Date:     24/02/2017
   <ul class="list-group">
     <li class="list-group-item" ng-repeat="movie in guide.movies | orderBy:!'-name'">
       {{movie.name | uppercase}}
-      <em class="pull-right">{{movie.rating}}/10</em><br>
+      <em class="pull-right">{{movie.rating}} / 10</em><br>
 
-      <img src="{{movie.thumb}}" />
+      <img src="{{movie.thumb}}"/>
     </li>
   </ul>
 

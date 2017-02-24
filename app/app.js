@@ -28,7 +28,7 @@
         yearRelease: 1994,
         rating: 8.9,
         mature: true,
-        thumb: "https://images-na.ssl-images-amazon.com/images/M/MV5BMTkxMTA5OTAzMl5BMl5BanBnXkFtZTgwNjA5MDc3NjE@._V1_UX182_CR0,0,182,268_AL_.jpg",
+        thumb: "https://images-na.ssl-images-amazon.com/images/M/MV5BMTkxMTA5OTAzMl5BMl5BanBnXkFtZTgwNjA5MDc3NjE@._V1_SY1000_CR0,0,673,1000_AL_.jpg",
         trailer: "https://www.youtube.com/watch?v=s7EdQ4FqbhY",
         reviews: [
           {
