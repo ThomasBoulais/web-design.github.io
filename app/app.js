@@ -1,6 +1,7 @@
 (function(){
   var app = angular.module('guide', [ ]);
 
+  // définition de movies
   app.controller('GuideController', function(){
     this.movies = [
       {
@@ -43,7 +44,21 @@
         ]
       }
     ];
-    console.log(angular.toJson(this.movies));
   });
+
+  // définition des fonctions onglets
+  app.controller('PanelController', function(){
+    this.tab = 1;
+
+    this.selectTab = function(setTab){
+      this.tab = setTab;
+    };
+
+    this.isSelected = function(checkTab){
+      return this.tab === checkTab;
+    };
+  });
+
+  
 
 })();

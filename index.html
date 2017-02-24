@@ -12,18 +12,40 @@ Date:     24/02/2017
   <script type="text/javascript" src="app\lib\angular.min.js"></script>
   <script type="text/javascript" src="app\app.js"></script>
   <title>Movie Guide</title>
-  <h1>Hello world! :)</h1>
 </head>
 
 <body ng-controller="GuideController as guide">
-  <ul class="list-group">
-    <li class="list-group-item" ng-repeat="movie in guide.movies | orderBy:!'-name'">
-      {{movie.name | uppercase}}
-      <em class="pull-right">{{movie.rating}} / 10</em><br>
 
-      <img class="resize" src="{{movie.thumb}}"/>
-    </li>
-  </ul>
+  <header>
+    <div class="navbar navbar-inverse">
+      <form class="navbar-form navbar-right inline-form">
+        <img class="resizeLogo" src="content\img\logo.png"/>
+        <p class="titre">Hello world! :)</p>
+        <div class="form-group">
+          <input type="search" class="input-sm form-control" placeholder="Recherche">
+          <button type="submit" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-eye-open"></span> Chercher</button>
+        </div>
+      </form>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="navbar navbar-inverse navStyle">
+      <a rel="nofollow"> All </a>
+      <a rel="nofollow"> #0-9 </a>
+      <a rel="nofollow"> A </a>
+    </div>
+
+    <section>
+      <div class="list-group row">
+        <div class="list-group-item col-lg-3" ng-repeat="movie in guide.movies | orderBy:!'-name'">
+          {{movie.name | uppercase}}
+          <em class="pull-right">{{movie.rating}} / 10</em><br>
+          <img class="resizePoster" src="{{movie.thumb}}"/>
+        </div>
+      </div>
+    </section>
+  </div>
 
 </body>
 </html>
