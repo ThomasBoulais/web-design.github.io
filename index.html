@@ -18,6 +18,8 @@ Date:     24/02/2017
     <li class="list-group-item" ng-repeat="movie in guide.movies | orderBy:!'-name'">
       {{movie.name | uppercase}}
       <em class="pull-right">{{movie.rating}}/10</em><br>
+
+      <img src="{{movie.thumb}}" />
     </li>
   </ul>
 
