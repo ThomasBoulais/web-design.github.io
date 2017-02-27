@@ -1,5 +1,9 @@
 img.resizePoster{
-  max-height: 50%;
+  max-height: 300px;
+}
+
+img.bigPicture{
+  max-height: 400px;
 }
 
 img.resizeLogo{
