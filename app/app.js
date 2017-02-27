@@ -29,12 +29,7 @@
 
         $scope.reviewsFilm = $scope.movies[$scope.numFilm].reviews;
   }
-  $scope.showInfoMovie = function(){
 
-
-
-
-  };
 
 $scope.getNumFilm = function(nomFilm){
   for(var i = 0; i<$scope.movies.length; i++){
@@ -56,7 +51,7 @@ $scope.getNumFilm = function(nomFilm){
 
 
     $scope.dimensionner = function(){
-      if($scope.movies[$scope.numFilm].showInfo === true){
+      if($scope.movies[$scope.numFilm].showInfo){
         $scope.movies[$scope.numFilm].dimensionCadre = $scope.dimensionCadreMin;
         $scope.movies[$scope.numFilm].dimensionImage=  $scope.dimensionImageMin;
       }
