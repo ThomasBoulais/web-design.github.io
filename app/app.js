@@ -65,7 +65,7 @@ $scope.getNumFilm = function(nomFilm){
     // fonction pour ajouter une review
     $scope.ajouterReview = function(review){
       $scope.movies[$scope.numFilm].reviews.push({'stars':review.note,'body':review.contenu,'author':review.email});
-      this.review= {};
+      $scope.review= {};
     }
 
 
