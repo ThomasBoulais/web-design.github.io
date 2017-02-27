@@ -19,7 +19,7 @@
     // Pour les noms de classe dynamique
   $scope.dimensionCadreMin = 'list-group-item col-lg-4';
   $scope.dimensionImageMin = 'resizePoster';
-  $scope.dimensionCadreMax = 'list-group-item col-lg-6';
+  $scope.dimensionCadreMax = 'list-group-item col-lg-8';
   $scope.dimensionImageMax = 'bigPicture';
 
 
