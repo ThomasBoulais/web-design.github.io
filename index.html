@@ -40,14 +40,14 @@ Date:     24/02/2017
     <section class="col-lg-9">
       <div class="list-group row">
         <div class="list-group-item col-lg-4"
-         ng-repeat="movie in movies | orderBy:'rating' | filter:recherche:strict "
+         ng-repeat="movie in movies | orderBy:'rating' | filter:recherche:strict"
          ng-class="movie.dimensionCadre" >
 
           {{movie.name | uppercase}}
           <em class="pull-right">{{movie.rating}} / 10</em><br>
           <img class="resizePoster" ng-click="clickFilm(movie.name)"
           ng-class="movie.dimensionImage" src="{{movie.thumb}}" />
-          <div ng-show="movie.dimensionCadre == dimensionCadreMax">
+          <div ng-show="movie.dimensionCadre === dimensionCadreMax">
             <p>
               Film réalisé par {{movie.director}} en {{movie.yearRelease}}</br>
               <p class="filmMature" ng-show="movie.mature">
