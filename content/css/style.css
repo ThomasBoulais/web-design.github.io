@@ -4,7 +4,7 @@ img.resizePoster{
 
 img.bigPicture{
   max-height: 330px;
-  position: fixed;
+  position: static;
 }
 
 img.resizeLogo{
