@@ -61,13 +61,14 @@ Date:     24/02/2017
       </div>
     </section>
 
-    <section class="col-lg-3 revStyle" ng-show="showReview">
+    <section class="col-lg-3" ng-show="showReview">
       <h3 class="titreReview">Review de film </h3>
       <div ng-repeat="review in reviewsFilm"
         class="review">
+            </br>
             <p class="reviewStatic">  Note : {{review.stars}} / 5</br> </p>
             <p class="reviewStatic">Auteur : {{review.author}}</br> </p>
-            {{review.body}}</br></br>
+            {{review.body}}</br>
       </div>
 
       <h3 class="titreReview">Ecrire une review</h3>
