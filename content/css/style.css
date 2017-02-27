@@ -1,6 +1,6 @@
 img.resizePoster{
 
-  max-height: 300px;
+  max-height: 200px;
 }
 
 img.resizeLogo{
@@ -30,8 +30,4 @@ img.resizeLogo{
   text-align: center;
   top: auto;
   display: inline;
-}
-
-.film{
-  font-size: 15px;
 }
