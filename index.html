@@ -39,13 +39,15 @@ Date:     24/02/2017
 
     <section class="col-lg-3">
       <h3 class="titreReview">Review de film </h3>
-
-      <div ng-repeat="review in reviewsFilm" class="review" ng-show="showreview">
-            </br>
-            <p class="reviewStatic revStyle">  Note : {{review.stars}} / 5
-            </br>Auteur : {{review.author}}
-            </br>{{review.body}}</br></p>
+      <div ng-show="showReview">
+        <div ng-repeat="review in reviewsFilm" class="review">
+              </br>
+              <p class="reviewStatic revStyle">  Note : {{review.stars}} / 5
+              </br>Auteur : {{review.author}}
+              </br>{{review.body}}</br></p>
+        </div>
       </div>
+
       <h3 class="titreReview">Ecrire une review</h3>
 
       <form>
