@@ -10,7 +10,7 @@ Date:     24/02/2017
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="content\css\bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="content\css\style.css" />
-  <script type="text/javascript" src="app\lib\angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
   <script type="text/javascript" src="app\app.js"></script>
   <title>Movie Guide</title>
 </head>
@@ -20,37 +20,67 @@ Date:     24/02/2017
     <div class="navbar navbar-inverse">
 
         <img class="resizeLogo" src="content\img\logo.png"/>
-        <p class="titre">Movie Guide 3476 super trop cool </p>
+        <p class="titre">Movie Guide </p>
 
     </div>
   </header>
 
   <div class="container">
     <div class="navbar navbar-inverse navStyle">
-      <a rel="nofollow"> All </a>
-      <a rel="nofollow"> #0-9 </a>
-      <a rel="nofollow"> A </a>
+      <a rel="nofollow"> Liste des films </a>
     <form class="navbar-form navbar-right inline-form">
       <div class="form-group">
-        <input type="text" ng-model="recherche.name" class="input-sm form-control" placeholder="Recherche">
-        <button type="submit" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-eye-open"></span> Chercher</button>
+
+        <!-- Pour spécifier le champ de recherche parmis l'objet -->
+        <input  type="text" ng-model="recherche.name" class="input-sm form-control decalage" placeholder="Recherche">
       </div>
     </form>
     </div>
 
-    <section>
+    <section class="col-lg-9">
       <div class="list-group row">
-        <div class="list-group-item col-lg-3" ng-repeat="movie in movies | orderBy:'name' | filter:recherche:strict " ng-class="dimensionner(movie.showInfo)" >
+        <div class="list-group-item col-lg-3"
+         ng-repeat="movie in movies | orderBy:'rating' | filter:recherche:strict "
+         ng-class="movie.dimensionCadre" >
+
           {{movie.name | uppercase}}
           <em class="pull-right">{{movie.rating}} / 10</em><br>
-          <img class="resizePoster" src="{{movie.thumb}}" ng-click="movie.showInfo =!movie.showInfo"/>
-          <p class="info"ng-show="movie.showInfo">directeur : {{movie.director}} </br> Année de sortie : {{movie.yearRelease}}</p>
+          <img class="resizePoster" ng-click="clickFilm(movie.name)"
+          ng-class="movie.dimensionImage" src="{{movie.thumb}}" />
+          <div ng-show="movie.dimensionCadre == dimensionCadreMax">
+            <p>
+              Film réalisé par {{movie.director}} en {{movie.yearRelease}}</br>
+              <p class="filmMature" ng-show="movie.mature">
+                Attention ce film n'est pas tout public ! </br>
+              </p>
+              Résumé du film : {{movie.plot}} .</br>
+              Lien du trailer : {{movie.trailer}} .
+            </p>
+          </div>
         </div>
       </div>
     </section>
-    <section>
-      {{filmPlot}}
+
+    <section class="col-lg-3 moche" ng-show="showReview">
+      <h3 class="titreReview">Review de film </h3>
+      <div ng-repeat="review in reviewsFilm"
+        class="review">
+            <p class="reviewStatic">  Note : {{review.stars}} / 5</br> </p>
+            <p class="reviewStatic">Auteur : {{review.author}}</br> </p>
+            {{review.body}}</br>
+      </div>
+
+      <h3 class="titreReview">Ecrire une review</h3>
+
+      <form>
+        <input  type="email" ng-model="review.email" class="input-sm form-control decalage" placeholder="Adresse mail">
+        <input  type="range" ng-model="review.note" min="0" max="5" class="input-sm form-control decalage">note : {{review.note}}
+        <input  type="text" ng-model="review.contenu" class="input-sm form-control decalage" placeholder="Votre review">
+          <input type="submit" ng-click="ajouterReview(review)" value="Envoyer"/>
+      </form>
+
     </section>
+
   </div>
 </body>
 </html>
