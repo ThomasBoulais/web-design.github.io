@@ -28,9 +28,8 @@ img.resizeLogo{
   font-family: 'Arial bold', sans-serif;
   font-size: 100px;
   line-height: 76px;
-  margin: 0;
+  margin: 200px;
   position: relative;
-  text-align: right;
   top: auto;
   display: inline;
 }
