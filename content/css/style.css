@@ -35,6 +35,11 @@ img.resizeLogo{
   display: inline;
 }
 
-.reviewStatic{
+.titreReview{
+  font-family: 'Arial bold', sans-serif;
+}
+
+.revStyle{
+  font-family: 'Arial', sans-serif;
   font-style: italic;
 }
