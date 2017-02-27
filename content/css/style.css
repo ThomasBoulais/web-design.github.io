@@ -4,7 +4,6 @@ img.resizePoster{
 
 img.bigPicture{
   max-height: 330px;
-  position: static;
 }
 
 img.resizeLogo{
@@ -34,4 +33,8 @@ img.resizeLogo{
   text-align: center;
   top: auto;
   display: inline;
+}
+
+.reviewStatic{
+  font-style: italic;
 }
