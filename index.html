@@ -37,16 +37,15 @@ Date:     24/02/2017
     </form>
     </div>
 
-    <section class="col-lg-3" ng-show="showReview">
+    <section class="col-lg-3">
       <h3 class="titreReview">Review de film </h3>
-      <div ng-repeat="review in reviewsFilm"
-        class="review">
+
+      <div ng-repeat="review in reviewsFilm" class="review" ng-show="showreview">
             </br>
             <p class="reviewStatic revStyle">  Note : {{review.stars}} / 5
             </br>Auteur : {{review.author}}
             </br>{{review.body}}</br></p>
       </div>
-
       <h3 class="titreReview">Ecrire une review</h3>
 
       <form>
@@ -55,9 +54,8 @@ Date:     24/02/2017
         <input  type="text" ng-model="review.contenu" class="input-sm form-control decalage" placeholder="Votre review">
           <input type="submit" ng-click="ajouterReview(review)" value="Envoyer"/>
       </form>
-
     </section>
-    
+
     <section class="col-lg-9">
       <div class="list-group row">
         <div class="list-group-item col-lg-4"
@@ -81,8 +79,6 @@ Date:     24/02/2017
         </div>
       </div>
     </section>
-
-
 
   </div>
 </body>
